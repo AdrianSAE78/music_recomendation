@@ -51,6 +51,7 @@ Esto abrirá el frontend en un puerto como el 5501 (por ejemplo: http://127.0.0.
 Esto permite que el frontend en http://127.0.0.1:5501 haga peticiones al backend que está corriendo en el puerto 3000.
 
 ** Estructura de Archivos
+
 /music_recomendation
 │
 ├── backend/
