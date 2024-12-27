@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recomendation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3537fd9e2b.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">El Rincón de la Música</h1>
+        <div class="row-card">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Ingresa tú música</h3>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <label for="nombre_cancion">Cancion: 
+                            <input class="input-music" type="text" id="nombre_cancion" placeholder="Ingrese el nombre de la canción" required>
+                        </label>
+                        <label for="artista_cancion">Artista: 
+                            <input class="input-music" type="text" id="artista_cancion" placeholder="Ingrese el nombre del artista" required>
+                        </label>
+                        <label for="url_cancion">URL: 
+                            <input class="input-music" type="url" id="url_cancion" placeholder="Ingrese la URL de la canción" required>
+                        </label>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button class="btn add-song" id="agregarCancion"><i class="fa-solid fa-plus"></i>Agregar Canción</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Canciones Recomendadas</h2>
+                </div>
+                <div class="card-body" id="recomendacionAleatoria">
+                    <button class="btn random-song" id="cancionAleatoria"><i class="fa-solid fa-thumbs-up"></i>Mostrar Canción</button>
+                </div>
+            </div>
+        </div>
+        <div id="random"></div>
+    </div>
+    <hr class="border-footer">
+    <footer>
+        <ul>
+            <li>
+                <a href="https://github.com/AdrianSAE78"><i class="fa-brands fa-github"></i></a>
+            </li>
+        </ul>
+        <p>© Adrian Acuña Estrada | Todos los Derechos Reservados</p>
+    </footer>
+
+    <template class="random-template fade-in">
+        <div class="random-container">
+            <p class="random-id"></p>
+            <div class="likes-section">
+                <button class="random-vote btn"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-check"></i></button>
+                <span class="total-likes"></span>
+            </div>
+            <h2 class="random-name"></h2>
+            <h3 class="random-artist"></h3>
+            <a class="random-url" href=""><i class="fa-brands fa-youtube"></i>Ir al vídeo</a>
+        </div>
+    </template>
+</body>
+
+</html>
